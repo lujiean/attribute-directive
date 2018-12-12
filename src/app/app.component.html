@@ -1,4 +1,4 @@
-<!--The content below is only a placeholder and can be replaced.-->
+<!-- The content below is only a placeholder and can be replaced.
 <div style="text-align:center">
   <h1>
     Welcome to {{ title }}!
@@ -16,5 +16,25 @@
   <li>
     <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
   </li>
-</ul>
+</ul> -->
 
+<!-- <p appHighlight>Highlight me!</p> -->
+
+<!-- <p appHighlight highlightCorlor="yellow">Highlighted in yellow</p>
+<p appHighlight [highlightCorlor]="'orange'">Highlighted in orange</p>
+<p appHighlight [highlightColor]="color">Highlighted with parent component's color</p>
+<p [appHighlight]="color">Highlight me!</p> -->
+
+<h1>My First Attribute Directive</h1>
+
+<h4>Pick a highlight color</h4>
+<div>
+  <input type="radio" name="colors" (click)="color='lightgreen'">Green
+  <input type="radio" name="colors" (click)="color='yellow'">Yellow
+  <input type="radio" name="colors" (click)="color='cyan'">Cyan
+</div>
+<p [appHighlight]="color">Highlight me!</p>
+
+<p [appHighlight]="color" defaultColor="violet">
+  Highlight me too!
+</p>
